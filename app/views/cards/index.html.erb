@@ -1,0 +1,32 @@
+ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
+#suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+Looking at the previous solution, you can see that we're outputing the rank 4 times, once for each suit: puts "#{rank} of Clubs" (then "Diamonds", then "Hearts", then "Spades").  Instead of repeating that code 4 times, we can combine the rank with each suit using the suits array.  
+
+For example, when rank is 2, we want to combine it with "Clubs", then "Diamonds", then "Hearts", then "Spades".  To go through each of those elements in the suits array, it makes sense to use another loop:
+
+for rank in ranks
+  for ___ in suits
+    puts "#{rank} of ___"
+  end
+end
+
+<% 
+  die1 = rand (1..6)
+  die2 = rand (1..6)
+  total = die1 + die2 
+  %>
+
+<h1> Shuffle the cards! </h1>
+
+<p>
+  <img src="/images/dice/<%= die1%>.svg">
+  <img src="/images/dice/<%= die2%>.svg">
+</p>
+
+<p>
+  The total is <%=total%>
+</P>
+
+<p>
+<a href="/dice"> Roll Again</a>
+</p>
